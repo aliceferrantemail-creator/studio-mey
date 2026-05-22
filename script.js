@@ -192,6 +192,36 @@ const projects = [
       "images/decathlon8.jpg",
     ]
   },
+  {
+    title: "Russh Magazine",
+    description: "Raffey in Loewe for @russhmagazine",
+    credits: "Set Design: Alice Ferrante\nPhotography: Anna Victoria",
+    images: [
+      "images/russh1.jpg",
+      "images/russh2.jpg",
+    ]
+  },
+  {
+    title: "Tom Grennan Music Video",
+    description: "Shadowboxing by Tom Grennan",
+    credits: "Set Design: Alice Ferrante\nPhotography: Charlie-Charlie",
+    images: [
+      "images/tom1.jpg",
+      "images/tom2.jpg",
+    ]
+  },
+    {
+    title: "Jvck James - Easier Done than Said Music video ",
+    description: "Jvcl James feat Stormzy - Easier Done than Said",
+    credits: "Set Design: Alice Ferrante\nPhotography: Chris Chance",
+    images: [
+      "images/jvck1.jpg",
+      "images/jvck2.jpg",
+      "images/jvck3.jpg",
+      "images/jvck4.jpg",
+      "images/jvck5.jpg",
+    ]
+  },
 ];
 
 // ============================================================
