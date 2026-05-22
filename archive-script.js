@@ -9,7 +9,7 @@ const projects = [
     description: "Graphics laser cut ideas",
     images: [
       "images/laser1.jpg",
-      "images/laser2.jpg",
+      "images/laser2.bmp",
     ]
   },
    {
@@ -17,13 +17,13 @@ const projects = [
     description: "Report about my trip to Mongolia in 2023, photograohed and written by me for Orienteer Mapazine Isue 9th",
     credits: "Author: Alice Ferrante\nMgazine: Orienteer Mapazine",
     images: [
-      "images/orienteer1.JPG",
-      "images/orienteer2.JPG",
-      "images/orienteer3.JPG",
-      "images/orienteer4.JPG",
-      "images/orienteer5.JPG",
-      "images/orienteer6.JPG",
-      "images/orienteer7.JPG",
+      "images/orienteer1.jpg",
+      "images/orienteer2.jpg",
+      "images/orienteer3.jpg",
+      "images/orienteer4.jpg",
+      "images/orienteer5.jpg",
+      "images/orienteer6.jpg",
+      "images/orienteer7.jpg",
     ]
   },
    {
