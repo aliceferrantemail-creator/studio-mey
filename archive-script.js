@@ -9,7 +9,6 @@ const projects = [
     description: "Graphics laser cut ideas",
     images: [
       "images/laser1.jpg",
-      "images/laser2.bmp",
     ]
   },
    {
