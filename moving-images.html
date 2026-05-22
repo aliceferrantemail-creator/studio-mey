@@ -101,7 +101,19 @@
       <a href="info.html" class="nav-link">Info</a>
       <a href="contact.html" class="nav-link">Contact</a>
     </nav>
+  <button class="nav-hamburger" id="hamburger" aria-label="Menu">
+    <span></span><span></span><span></span>
+  </button>
   </header>
+
+  <nav class="nav-mobile" id="mobileMenu">
+    <a href="index.html" class="nav-mobile-link ">Images</a>
+    <a href="moving-images.html" class="nav-mobile-link active">Moving Images</a>
+    <a href="events.html" class="nav-mobile-link ">Events</a>
+    <a href="archive.html" class="nav-mobile-link ">Archive</a>
+    <a href="info.html" class="nav-mobile-link ">Info</a>
+    <a href="contact.html" class="nav-mobile-link ">Contact</a>
+  </nav>
 
   <main class="moving-images-page">
 
@@ -216,5 +228,19 @@ DOP: Billy Kendall</p>
   </footer>
 
   <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+  <script>
+    const hamburger = document.getElementById('hamburger');
+    const mobileMenu = document.getElementById('mobileMenu');
+    hamburger.addEventListener('click', () => {
+      hamburger.classList.toggle('open');
+      mobileMenu.classList.toggle('open');
+    });
+    mobileMenu.querySelectorAll('.nav-mobile-link').forEach(link => {
+      link.addEventListener('click', () => {
+        hamburger.classList.remove('open');
+        mobileMenu.classList.remove('open');
+      });
+    });
+  </script>
 </body>
 </html>
