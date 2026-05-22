@@ -8,6 +8,14 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@200;300;400&display=swap" rel="stylesheet" />
+  <style>
+    .gallery--single {
+      columns: 1 !important;
+      max-width: 600px !important;
+      margin-left: auto !important;
+      margin-right: auto !important;
+    }
+  </style>
 </head>
 <body>
 
@@ -17,7 +25,7 @@
 
   <header class="nav">
     <a href="index.html" class="nav-logo">STUDIO MEY</a>
-        <nav class="nav-links">
+    <nav class="nav-links">
       <a href="index.html" class="nav-link">Images</a>
       <a href="moving-images.html" class="nav-link">Moving Images</a>
       <a href="events.html" class="nav-link active">Events</a>
@@ -27,14 +35,25 @@
     </nav>
   </header>
 
-  <main class="gallery" id="gallery">
-
-    <!-- ADD YOUR EVENT CARDS HERE -->
-    <!-- Copy and paste more cards as needed, incrementing data-project="0", "1", "2" etc. -->
+  <main class="gallery gallery--single" id="gallery">
 
     <article class="project-card" data-project="0">
       <div class="card-img-wrap">
-        <img src="images/event1.jpg" alt="Event One" loading="lazy" />
+        <img src="images/Coteciel1.jpg" alt="Cote & Ciel Launch Event" loading="lazy" />
+        <div class="card-hover-label">View Project</div>
+      </div>
+    </article>
+
+    <article class="project-card" data-project="1">
+      <div class="card-img-wrap">
+        <img src="images/Merrellevent1.jpg" alt="Merrell x Unsanctioned Athletics" loading="lazy" />
+        <div class="card-hover-label">View Project</div>
+      </div>
+    </article>
+
+    <article class="project-card" data-project="2">
+      <div class="card-img-wrap">
+        <img src="images/Columbia1.jpg" alt="Columbia Hike Society Event" loading="lazy" />
         <div class="card-hover-label">View Project</div>
       </div>
     </article>
