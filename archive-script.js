@@ -16,9 +16,6 @@ const projects = [
     description: "Report about my trip to Mongolia in 2023, photograohed and written by me for Orienteer Mapazine Isue 9th",
     credits: "Author: Alice Ferrante\nMgazine: Orienteer Mapazine",
     images: [
-      "images/orienteer1.jpg",
-      "images/orienteer2.jpg",
-      "images/orienteer3.jpg",
       "images/orienteer4.jpg",
       "images/orienteer5.jpg",
       "images/orienteer6.jpg",
