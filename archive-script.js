@@ -16,11 +16,15 @@ const projects = [
     description: "Report about my trip to Mongolia in 2023, photographed and written by me for Orienteer Magazine Issue 9th.",
     credits: "Author: Alice Ferrante\nMagazine: Orienteer Magazine",
     images: [
-      "images/orienteer4.jpg",
-      "images/orienteer5.jpg",
-      "images/orienteer6.jpg",
-      "images/orienteer7.jpg",
+      "images/orienteerarticle1.jpg",
+      "images/orienteerarticle2.jpg",
+      "images/orienteerarticle3.jpg",
+      "images/orienteerarticle4.jpg",
+      "images/orienteerarticle5.jpg",
+      "images/orienteerarticle6.jpg",
+      "images/orienteerarticle7.jpg",
     ]
+  
   },
   {
     title: "Mongolia article for Peak Magazine - Volume 5",
