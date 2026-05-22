@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contact — STUDIO MEY</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@200;300;400&display=swap" rel="stylesheet" />
+  <style>
+    .contact-page {
+      position: relative;
+      z-index: 1;
+      min-height: calc(100vh - var(--nav-height));
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: var(--nav-height) 40px 80px;
+    }
+    .contact-content {
+      text-align: center;
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+    }
+    .contact-name {
+      font-size: 0.68rem;
+      font-weight: 300;
+      letter-spacing: 0.28em;
+      text-transform: uppercase;
+      color: var(--ink-faint);
+      margin-bottom: 12px;
+    }
+    .contact-link {
+      font-size: 1rem;
+      font-weight: 300;
+      letter-spacing: 0.06em;
+      color: var(--ink-soft);
+      text-decoration: none;
+      transition: color 0.3s ease;
+      display: block;
+    }
+    .contact-link:hover { color: var(--ink); }
+  </style>
+</head>
+<body>
+
+  <div class="bg-layer">
+    <img class="bg-image" src="images/bg.jpg" alt="" aria-hidden="true" />
+  </div>
+
+  <header class="nav">
+    <a href="index.html" class="nav-logo">STUDIO MEY</a>
+    <nav class="nav-links">
+      <a href="index.html" class="nav-link">Images</a>
+      <a href="moving-images.html" class="nav-link">Moving Images</a>
+      <a href="events.html" class="nav-link">Events</a>
+      <a href="archive.html" class="nav-link">Archive</a>
+      <a href="info.html" class="nav-link">Info</a>
+      <a href="contact.html" class="nav-link active">Contact</a>
+    </nav>
+  </header>
+
+  <main class="contact-page">
+    <div class="contact-content">
+      <p class="contact-name">Alice Ferrante — Set Designer</p>
+      <a href="mailto:aliceferrantemail@gmail.com" class="contact-link">aliceferrantemail@gmail.com</a>
+      <a href="tel:+447407689007" class="contact-link">+44 7407 689007</a>
+      <a href="https://www.instagram.com/_mey.line_/" target="_blank" rel="noopener" class="contact-link">@_mey.line_</a>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <span>© <span id="year"></span> Alice Ferrante — Set Designer</span>
+    <span class="footer-instagram">
+      <a href="https://www.instagram.com/_mey.line_/" target="_blank" rel="noopener">@_mey.line_</a>
+    </span>
+  </footer>
+
+  <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+</body>
+</html>
