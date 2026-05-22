@@ -19,9 +19,7 @@
       padding-left: 24px;
       padding-right: 24px;
     }
-    .video-block {
-      margin-bottom: 80px;
-    }
+    .video-block { margin-bottom: 80px; }
     .video-embed {
       position: relative;
       width: 100%;
@@ -30,7 +28,13 @@
       overflow: hidden;
       background: #000;
     }
-    .video-embed iframe {
+    .video-embed.vertical {
+      max-width: 380px;
+      padding-bottom: 67%;
+      margin: 0 auto;
+    }
+    .video-embed iframe,
+    .video-embed video {
       position: absolute;
       top: 0;
       left: 0;
@@ -77,6 +81,7 @@
     @media (max-width: 600px) {
       .video-info { flex-direction: column; gap: 20px; }
       .video-credits { text-align: left; }
+      .video-embed.vertical { max-width: 100%; padding-bottom: 177.77%; }
     }
   </style>
 </head>
@@ -98,6 +103,24 @@
   </header>
 
   <main class="moving-images-page">
+
+    <div class="video-block">
+      <div class="video-embed">
+        <video controls preload="metadata">
+          <source src="images/tomgrennan.mp4" type="video/mp4">
+        </video>
+      </div>
+      <div class="video-info">
+        <div>
+          <p class="video-title">Tom Grennan — Shadowboxing</p>
+          <p class="video-description">From the album "Everywhere I Went, Led Me to Where I Didn't Want to Be".</p>
+        </div>
+        <p class="video-credits">Art Dept: Alice Ferrante
+Director: Charlie & Charlie
+Producer: Aleisha Digby
+DOP: O.E. Morgan</p>
+      </div>
+    </div>
 
     <div class="video-block">
       <div class="video-embed">
@@ -158,6 +181,27 @@ Director: Charlie & Charlie
 Producer: Charlie & Charlie
 DOP: Charlie & Charlie
 Edit: Lola Cherry</p>
+      </div>
+    </div>
+
+    <div class="video-block">
+      <div class="video-embed vertical">
+        <iframe
+          src="https://www.youtube.com/embed/r83xmIsvpeI?rel=0&modestbranding=1"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+          allowfullscreen>
+        </iframe>
+      </div>
+      <div class="video-info">
+        <div>
+          <p class="video-title">Sports Direct x Nike Air Max — Heat Rises, Till Dawn</p>
+          <p class="video-description">Sports Direct x Nike Air Max campaign.</p>
+        </div>
+        <p class="video-credits">Art Direction: Alice Ferrante
+Art Assistant: Aurora Ulian
+Director: Daniel Alpernia
+Producer: Aleisha Digby
+DOP: Billy Kendall</p>
       </div>
     </div>
 
