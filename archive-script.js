@@ -1,20 +1,20 @@
 /* ============================================================
    STUDIO MEY — Archive Script
-   Fill in your archive projects below exactly like script.js
    ============================================================ */
 
 const projects = [
   {
     title: "Laser cut wooden pieces - personal experiment",
     description: "Graphics laser cut ideas",
+    credits: "",
     images: [
       "images/laser1.jpg",
     ]
   },
-   {
-    title: "Mongolia Article for Orenteer Mapazine Issue 9th - Carcadian Rhythm",
-    description: "Report about my trip to Mongolia in 2023, photograohed and written by me for Orienteer Mapazine Isue 9th",
-    credits: "Author: Alice Ferrante\nMgazine: Orienteer Mapazine",
+  {
+    title: "Mongolia Article for Orienteer Magazine Issue 9th - Circadian Rhythm",
+    description: "Report about my trip to Mongolia in 2023, photographed and written by me for Orienteer Magazine Issue 9th.",
+    credits: "Author: Alice Ferrante\nMagazine: Orienteer Magazine",
     images: [
       "images/orienteer1.jpg",
       "images/orienteer2.jpg",
@@ -25,10 +25,10 @@ const projects = [
       "images/orienteer7.jpg",
     ]
   },
-   {
-    title: "Mongolia article for Peak Magazine - Volume 5 ",
-    description: "In the Altai Mountains, Time Moves Differently. I arrived in Mongolia chasing a festival, but what I found was a different rhythm of life, one where time stretches wide like the snow-covered steppes. In the far west, near the Kazakh borderlands, my days were defined by thick silence, warm tea, and the crackling of fires inside gers. What began as a mission to document the Golden Eagle Festival quickly unravelled into something far more personal: a quiet immersion into a nomadic culture that thrives on simplicity, resilience, and a deep connection to nature.",
-    credits: "Author: Alice Ferrante\nMgazine: Peak Magazine",
+  {
+    title: "Mongolia article for Peak Magazine - Volume 5",
+    description: "In the Altai Mountains, Time Moves Differently. I arrived in Mongolia chasing a festival, but what I found was a different rhythm of life, one where time stretches wide like the snow-covered steppes.",
+    credits: "Author: Alice Ferrante\nMagazine: Peak Magazine",
     images: [
       "images/peak1.jpg",
       "images/peak2.jpg",
@@ -36,7 +36,6 @@ const projects = [
       "images/peak4.jpg",
     ]
   },
-  
 ];
 
 // ============================================================
