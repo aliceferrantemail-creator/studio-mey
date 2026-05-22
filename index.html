@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>STUDIO MEY</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@200;300;400&display=swap" rel="stylesheet" />
+</head>
+<body>
+ 
+  <div class="bg-layer">
+    <img class="bg-image" src="images/bg.jpg" alt="" aria-hidden="true" />
+  </div>
+ 
+  <header class="nav">
+    <a href="index.html" class="nav-logo">STUDIO MEY</a>
+    <nav class="nav-links">
+      <a href="index.html" class="nav-link active">Images</a>
+      <a href="moving-images.html" class="nav-link">Moving Images</a>
+      <a href="events.html" class="nav-link">Events</a>
+      <a href="archive.html" class="nav-link">Archive</a>
+      <a href="info.html" class="nav-link">Info</a>
+      
+    </nav>
+  </header>
+ 
+  <main class="gallery" id="gallery">
+ 
+    <article class="project-card" data-project="0">
+      <div class="card-img-wrap">
+        <img src="images/ColumbiaxBrandnation1.jpg" alt="Columbia x Brandnation" loading="lazy" />
+        <div class="card-hover-label">View Project</div>
+      </div>
+    </article>
+ 
+    <article class="project-card" data-project="1">
+      <div class="card-img-wrap">
+        <img src="images/HPxMammut1.jpg" alt="Hiking Patrol x Mammut" loading="lazy" />
+        <div class="card-hover-label">View Project</div>
+      </div>
+    </article>
+ 
+    <article class="project-card" data-project="2">
+      <div class="card-img-wrap">
+        <img src="images/GlassMag1.jpg" alt="Glass Magazine" loading="lazy" />
+        <div class="card-hover-label">View Project</div>
+      </div>
+    </article>
+ 
+    <article class="project-card" data-project="3">
+      <div class="card-img-wrap">
+        <img src="images/HikingPatrolCity1.jpg" alt="Hiking Patrol - Renewal in Repose" loading="lazy" />
+        <div class="card-hover-label">View Project</div>
+      </div>
+    </article>
+ 
+    <article class="project-card" data-project="4">
+      <div class="card-img-wrap">
+        <img src="images/HikingPatrolMoss1.jpg" alt="Hiking Patrol SS26" loading="lazy" />
+        <div class="card-hover-label">View Project</div>
+      </div>
+    </article>
+ 
+    <article class="project-card" data-project="5">
+      <div class="card-img-wrap">
+        <img src="images/pmo1.jpg" alt="Purple Mountain Observatory" loading="lazy" />
+        <div class="card-hover-label">View Project</div>
+      </div>
+    </article>
+ 
+    <article class="project-card" data-project="6">
+      <div class="card-img-wrap">
+        <img src="images/pop1.jpg" alt="POP Magazine" loading="lazy" />
+        <div class="card-hover-label">View Project</div>
+      </div>
+    </article>
+ 
+    <article class="project-card" data-project="7">
+      <div class="card-img-wrap">
+        <img src="images/skypeople4.jpg" alt="Sky People" loading="lazy" />
+        <div class="card-hover-label">View Project</div>
+      </div>
+    </article>
+ 
+    <article class="project-card" data-project="8">
+      <div class="card-img-wrap">
+        <img src="images/therakishgent1.jpg" alt="The Rakish Gent Magazine" loading="lazy" />
+        <div class="card-hover-label">View Project</div>
+      </div>
+    </article>
+ 
+    <article class="project-card" data-project="9">
+      <div class="card-img-wrap">
+        <img src="images/wsj1.jpg" alt="WSJ Magazine" loading="lazy" />
+        <div class="card-hover-label">View Project</div>
+      </div>
+    </article>
+ 
+    <article class="project-card" data-project="10">
+      <div class="card-img-wrap">
+        <img src="images/Hmoser1.jpg" alt="H.Moser & Cie - Pump edition x Reebok" loading="lazy" />
+        <div class="card-hover-label">View Project</div>
+      </div>
+    </article>
+ 
+    <article class="project-card" data-project="11">
+      <div class="card-img-wrap">
+        <img src="images/Hmoserb1.jpg" alt="H.Moser & Cie - Streamline DNA Edition" loading="lazy" />
+        <div class="card-hover-label">View Project</div>
+      </div>
+    </article>
+ 
+    <article class="project-card" data-project="12">
+      <div class="card-img-wrap">
+        <img src="images/Sportsdirect1.jpg" alt="Sports Direct - Nike Air Max - Heat Rises" loading="lazy" />
+        <div class="card-hover-label">View Project</div>
+      </div>
+    </article>
+ 
+  </main>
+ 
+  <footer class="site-footer">
+    <span>© <span id="year"></span> Alice Ferrante — Set Designer</span>
+    <span class="footer-instagram">
+      <a href="https://www.instagram.com/_mey.line_/" target="_blank" rel="noopener">@_mey.line_</a>
+    </span>
+  </footer>
+ 
+  <div class="overlay" id="overlay" aria-hidden="true">
+    <button class="overlay-close" id="overlayClose" aria-label="Close project">
+      <span></span><span></span>
+    </button>
+    <div class="overlay-inner">
+      <div class="overlay-images" id="overlayImages"></div>
+      <div class="overlay-info">
+        <p class="overlay-number" id="overlayNumber">01</p>
+        <h2 class="overlay-title" id="overlayTitle">Project Title</h2>
+        <p class="overlay-description" id="overlayDescription"></p>
+        <p class="overlay-credits" id="overlayCredits"></p>
+      </div>
+    </div>
+  </div>
+ 
+  <script src="script.js"></script>
+</body>
+</html>

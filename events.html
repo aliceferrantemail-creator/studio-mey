@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Events — STUDIO MEY</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@200;300;400&display=swap" rel="stylesheet" />
+</head>
+<body>
+
+  <div class="bg-layer">
+    <img class="bg-image" src="images/bg.jpg" alt="" aria-hidden="true" />
+  </div>
+
+  <header class="nav">
+    <a href="index.html" class="nav-logo">STUDIO MEY</a>
+    <nav class="nav-links">
+      <a href="index.html" class="nav-link">Images</a>
+      <a href="events.html" class="nav-link active">Events</a>
+      <a href="archive.html" class="nav-link">Archive</a>
+      <a href="info.html" class="nav-link">Info</a>
+      <a href="mailto:your@email.com" class="nav-link">Contact</a>
+    </nav>
+  </header>
+
+  <main class="gallery gallery--single" id="gallery">
+
+    <!-- ADD YOUR EVENT CARDS HERE -->
+    <!-- Copy and paste more cards as needed, incrementing data-project="0", "1", "2" etc. -->
+
+    <article class="project-card" data-project="0">
+      <div class="card-img-wrap">
+        <img src="images/Coteciel1.jpg" alt="Cote & Ciel Launch Event" loading="lazy" />
+        <div class="card-hover-label">View Project</div>
+      </div>
+    </article>
+
+    <article class="project-card" data-project="1">
+      <div class="card-img-wrap">
+        <img src="images/Merrellevent1.jpg" alt="Merrell x Unsactioned Atheletics Event at Netil360 - London" loading="lazy" />
+        <div class="card-hover-label">View Project</div>
+      </div>
+    </article>
+
+     <article class="project-card" data-project="2">
+      <div class="card-img-wrap">
+        <img src="images/columbiaevent1.jpg" alt="Columbia - Hike Society event at Barbican Centre - London" loading="lazy" />
+        <div class="card-hover-label">View Project</div>
+      </div>
+    </article>
+
+
+  </main>
+
+  <footer class="site-footer">
+    <span>© <span id="year"></span> Alice Ferrante — Set Designer</span>
+    <span class="footer-instagram">
+      <a href="https://www.instagram.com/_mey.line_/" target="_blank" rel="noopener">@_mey.line_</a>
+    </span>
+  </footer>
+
+  <div class="overlay" id="overlay" aria-hidden="true">
+    <button class="overlay-close" id="overlayClose" aria-label="Close project">
+      <span></span><span></span>
+    </button>
+    <div class="overlay-inner">
+      <div class="overlay-images" id="overlayImages"></div>
+      <div class="overlay-info">
+        <p class="overlay-number" id="overlayNumber">01</p>
+        <h2 class="overlay-title" id="overlayTitle">Project Title</h2>
+        <p class="overlay-description" id="overlayDescription"></p>
+        <p class="overlay-credits" id="overlayCredits"></p>
+      </div>
+    </div>
+  </div>
+
+  <script src="events-script.js"></script>
+</body>
+</html>

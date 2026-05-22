@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Info — STUDIO MEY</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@200;300;400&display=swap" rel="stylesheet" />
+  <style>
+    body.info-body {
+      background: #000;
+    }
+    .info-bg {
+      position: fixed;
+      inset: 0;
+      z-index: 0;
+    }
+    .info-bg img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center;
+      opacity: 1;
+    }
+    body.info-body .nav {
+      background: transparent;
+      backdrop-filter: none;
+      -webkit-backdrop-filter: none;
+      border-bottom: none;
+    }
+    body.info-body .nav-logo { color: rgba(255,255,255,0.9); }
+    body.info-body .nav-logo:hover { opacity: 0.6; }
+    body.info-body .nav-link { color: rgba(255,255,255,0.5); }
+    body.info-body .nav-link:hover,
+    body.info-body .nav-link.active { color: rgba(255,255,255,0.95); }
+
+    .info-fullbleed {
+      position: relative;
+      z-index: 1;
+      min-height: 100vh;
+      display: flex;
+      align-items: flex-end;
+      justify-content: flex-end;
+      padding: calc(var(--nav-height) + 40px) 64px 80px;
+    }
+    .info-fullbleed-content {
+      max-width: 380px;
+      text-align: right;
+    }
+    .info-fullbleed .info-name {
+      font-size: 1.2rem;
+      font-weight: 300;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      line-height: 1;
+      color: rgba(255,255,255,0.95);
+      margin-bottom: 10px;
+    }
+    .info-fullbleed .info-role {
+      font-size: 0.65rem;
+      font-weight: 300;
+      letter-spacing: 0.28em;
+      text-transform: uppercase;
+      color: rgba(255,255,255,0.55);
+      margin-bottom: 28px;
+    }
+    .info-fullbleed .info-bio {
+      font-size: 0.78rem;
+      font-weight: 300;
+      line-height: 2;
+      color: rgba(255,255,255,0.75);
+      margin-bottom: 36px;
+      letter-spacing: 0.02em;
+    }
+    .info-fullbleed .info-services {
+      margin-bottom: 36px;
+    }
+    .info-fullbleed .info-services-label {
+      font-size: 0.62rem;
+      font-weight: 300;
+      letter-spacing: 0.25em;
+      text-transform: uppercase;
+      color: rgba(255,255,255,0.4);
+      margin-bottom: 12px;
+    }
+    .info-fullbleed .info-services ul {
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+      list-style: none;
+    }
+    .info-fullbleed .info-services li {
+      font-size: 0.75rem;
+      font-weight: 300;
+      letter-spacing: 0.08em;
+      color: rgba(255,255,255,0.65);
+    }
+    .info-fullbleed .info-contact {
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+      align-items: flex-end;
+    }
+    .info-fullbleed .info-email,
+    .info-fullbleed .info-instagram {
+      font-size: 0.75rem;
+      font-weight: 300;
+      letter-spacing: 0.1em;
+      color: rgba(255,255,255,0.6);
+      text-decoration: none;
+      transition: color 0.3s ease;
+    }
+    .info-fullbleed .info-email:hover,
+    .info-fullbleed .info-instagram:hover { color: rgba(255,255,255,0.95); }
+
+    body.info-body .site-footer {
+      position: relative;
+      z-index: 1;
+      border-top: 1px solid rgba(255,255,255,0.15);
+      color: rgba(255,255,255,0.35);
+      background: transparent !important;
+    }
+    body.info-body .site-footer a { color: rgba(255,255,255,0.35); }
+    body.info-body .site-footer a:hover { color: rgba(255,255,255,0.7); }
+  </style>
+</head>
+<body class="info-body">
+
+  <div class="info-bg">
+    <img src="images/me.PNG" alt="" aria-hidden="true" />
+  </div>
+
+  <header class="nav">
+    <a href="index.html" class="nav-logo">STUDIO MEY</a>
+    <nav class="nav-links">
+      <a href="index.html" class="nav-link">Images</a>
+      <a href="events.html" class="nav-link">Events</a>
+      <a href="archive.html" class="nav-link">Archive</a>
+      <a href="info.html" class="nav-link active">Info</a>
+    </nav>
+  </header>
+
+  <main class="info-fullbleed">
+    <div class="info-fullbleed-content">
+
+      <h1 class="info-name">Alice Ferrante</h1>
+      <p class="info-role">Set Designer — London · Paris · Zurich</p>
+
+      <p class="info-bio">
+        Alice Ferrante is a set designer working across film, photography, and editorial.
+        Her work explores the architecture of atmosphere — constructing worlds that feel
+        at once intimate and expansive. She collaborates closely with directors and
+        photographers to build visual narratives from the ground up.
+      </p>
+
+      <div class="info-services">
+        <p class="info-services-label">Services</p>
+        <ul>
+          <li>Set Design</li>
+          <li>Art Direction</li>
+          <li>Prop Styling</li>
+          <li>Concept Development</li>
+        </ul>
+      </div>
+
+      <div class="info-contact">
+        <a href="mailto:aliceferrantemail@gmail.com" class="info-email">aliceferrantemail@gmail.com</a>
+        <a href="https://www.instagram.com/_mey.line_/" target="_blank" rel="noopener" class="info-instagram">@_mey.line_</a>
+      </div>
+
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <span>© <span id="year"></span> Alice Ferrante — Set Designer</span>
+    <span class="footer-instagram">
+      <a href="https://www.instagram.com/_mey.line_/" target="_blank" rel="noopener">@_mey.line_</a>
+    </span>
+  </footer>
+
+  <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+</body>
+</html>
