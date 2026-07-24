@@ -71,7 +71,6 @@ const projects = [
       "images/PMOsummer4.jpg",
       "images/PMOsummer5.jpg",
       "images/PMOsummer6.jpg",
-      "images/PMOsummer7.jpg",
     ]
   },
    
