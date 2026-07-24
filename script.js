@@ -223,9 +223,9 @@ const projects = [
     ]
   },
      {
-    title: "Jvck James - Easier Done than Said Music video ",
-    description: "Jvcl James feat Stormzy - Easier Done than Said",
-    credits: "Set Design: Alice Ferrante\nPhotography: Chris Chance",
+    title: "Fucking Young Magazine cover",
+    description: "Fucking young Magazine cover 2026",
+    credits: "Set Design: Alice Ferrante\nPhotography: Michiel Meewis",
     images: [
       "images/jvck1.jpg",
       "images/jvck2.jpg",
@@ -234,18 +234,7 @@ const projects = [
       "images/jvck5.jpg",
     ]
   },
-     {
-    title: "Jvck James - Easier Done than Said Music video ",
-    description: "Jvcl James feat Stormzy - Easier Done than Said",
-    credits: "Set Design: Alice Ferrante\nPhotography: Chris Chance",
-    images: [
-      "images/jvck1.jpg",
-      "images/jvck2.jpg",
-      "images/jvck3.jpg",
-      "images/jvck4.jpg",
-      "images/jvck5.jpg",
-    ]
-  },
+
 ];
 
 // ============================================================
