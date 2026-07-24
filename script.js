@@ -222,6 +222,44 @@ const projects = [
       "images/jvck5.jpg",
     ]
   },
+     {
+    title: "Atmos x Mezzanine Event set - Awaykin Studio",
+    description: "Art dircection for Mezzanine studio x Atmos event",
+    credits: "Set Design: Alice Ferrante\nSet Decorator: Aurora Ulian",
+    images: [
+      "images/ATMOS1.jpg",
+      "images/ATMOS2.jpg",
+      "images/ATMOS3.jpg",
+      "images/ATMOS4.jpg",
+      "images/ATMOS5.jpg",
+      "images/ATMOS6.jpg",
+      "images/ATMOS7.jpg",
+    ]
+  },
+     {
+    title: "Jvck James - Easier Done than Said Music video ",
+    description: "Jvcl James feat Stormzy - Easier Done than Said",
+    credits: "Set Design: Alice Ferrante\nPhotography: Chris Chance",
+    images: [
+      "images/jvck1.jpg",
+      "images/jvck2.jpg",
+      "images/jvck3.jpg",
+      "images/jvck4.jpg",
+      "images/jvck5.jpg",
+    ]
+  },
+     {
+    title: "Jvck James - Easier Done than Said Music video ",
+    description: "Jvcl James feat Stormzy - Easier Done than Said",
+    credits: "Set Design: Alice Ferrante\nPhotography: Chris Chance",
+    images: [
+      "images/jvck1.jpg",
+      "images/jvck2.jpg",
+      "images/jvck3.jpg",
+      "images/jvck4.jpg",
+      "images/jvck5.jpg",
+    ]
+  },
 ];
 
 // ============================================================
