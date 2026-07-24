@@ -46,6 +46,34 @@ const projects = [
       "images/columbiaevent7.jpg",
     ]
   },
+      {
+    title: "Atmos x Mezzanine Event set - Awaykin Studio",
+    description: "Art dircection for Mezzanine studio x Atmos event",
+    credits: "Set Design: Alice Ferrante\nSet Decorator: Aurora Ulian",
+    images: [
+      "images/ATMOS1.jpg",
+      "images/ATMOS2.jpg",
+      "images/ATMOS3.jpg",
+      "images/ATMOS4.jpg",
+      "images/ATMOS5.jpg",
+      "images/ATMOS6.jpg",
+      "images/ATMOS7.jpg",
+    ]
+  },
+      {
+    title: "Purple Mountain Observatory Paris SFW2026",
+    description: "Art dircection for PMO Paris Fashion week 2026 Showrooom ",
+    credits: "Set Design: Alice Ferrante\nSet Decorator: Aurora Ulian",
+    images: [
+      "images/PMOsummer1.jpg",
+      "images/PMOsummer2.jpg",
+      "images/PMOsummer3.jpg",
+      "images/PMOsummer4.jpg",
+      "images/PMOsummer5.jpg",
+      "images/PMOsummer6.jpg",
+      "images/PMOsummer7.jpg",
+    ]
+  },
    
 ];
 
