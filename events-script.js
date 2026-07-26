@@ -1,14 +1,12 @@
 /* ============================================================
    STUDIO MEY — Events Script
-   Same as script.js but for the Events page.
-   Add your event projects here exactly the same way.
    ============================================================ */
 
 const projects = [
   {
     title: "Cote & Ciel Launch Event",
     description: "Art Direction and Production by Alice Ferrante",
-    credits: "Set Design: Alice Ferrante\n",
+    credits: "Set Design: Alice Ferrante",
     images: [
       "images/Coteciel1.jpg",
       "images/Coteciel2.jpg",
@@ -20,7 +18,7 @@ const projects = [
     ]
   },
   {
-    title: "Merrell x Unsactioned Atheletics Event at Netil360 - London",
+    title: "Merrell x Unsanctioned Athletics at Netil360 - London",
     description: "Nothing but the run - After party event set up",
     credits: "Set Design: Alice Ferrante\nGraphics: Tom Roche",
     images: [
@@ -32,9 +30,9 @@ const projects = [
       "images/Merrellevent6.jpg",
     ]
   },
- {
+  {
     title: "Columbia - Hike Society event at Barbican Centre - London",
-    description: "Dirt Bags - Hiking event lead by Columbia ",
+    description: "Dirt Bags - Hiking event lead by Columbia",
     credits: "Set Design: Alice Ferrante\nGraphics: Tom Roche",
     images: [
       "images/columbiaevent1.jpg",
@@ -46,34 +44,33 @@ const projects = [
       "images/columbiaevent7.jpg",
     ]
   },
-        {
-    title: "Atmos x Mezzanine Event set - Awaykin Studio",
-    description: "Art dircection for Mezzanine studio x Atmos event",
+  {
+    title: "Atmos x Mezzanine Event - Awaykin Studio",
+    description: "Art direction for Mezzanine studio x Atmos event",
     credits: "Set Design: Alice Ferrante\nSet Decorator: Aurora Ulian",
     images: [
       "images/ATMOS1.JPG",
-"images/ATMOS2.JPG",
-"images/ATMOS3.JPG",
-"images/ATMOS4.JPG",
-"images/ATMOS5.JPG",
-"images/ATMOS6.JPG",
-"images/ATMOS7.JPG",
+      "images/ATMOS2.JPG",
+      "images/ATMOS3.JPG",
+      "images/ATMOS4.JPG",
+      "images/ATMOS5.JPG",
+      "images/ATMOS6.JPG",
+      "images/ATMOS7.JPG",
     ]
   },
-      {
+  {
     title: "Purple Mountain Observatory Paris SFW2026",
-    description: "Art dircection for PMO Paris Fashion week 2026 Showrooom ",
+    description: "Art direction for PMO Paris Fashion Week 2026 Showroom",
     credits: "Set Design: Alice Ferrante\nSet Decorator: Aurora Ulian",
     images: [
-     "images/PMOsummer1.JPG",
-     "images/PMOsummer2.JPG",
-     "images/PMOsummer3.JPG",
-     "images/PMOsummer4.JPG",
-     "images/PMOsummer5.JPG",
-     "images/PMOsummer6.JPG",
+      "images/PMOsummer1.JPG",
+      "images/PMOsummer2.JPG",
+      "images/PMOsummer3.JPG",
+      "images/PMOsummer4.JPG",
+      "images/PMOsummer5.JPG",
+      "images/PMOsummer6.JPG",
     ]
   },
-   
 ];
 
 // ============================================================
@@ -90,7 +87,6 @@ const overlayCredits     = document.getElementById('overlayCredits');
 
 function openProject(index) {
   const p = projects[index];
-
   overlayImages.innerHTML = '';
   p.images.forEach(src => {
     const img = document.createElement('img');
@@ -99,12 +95,10 @@ function openProject(index) {
     img.loading = 'lazy';
     overlayImages.appendChild(img);
   });
-
   overlayNumber.textContent      = String(index + 1).padStart(2, '0');
   overlayTitle.textContent       = p.title;
   overlayDescription.textContent = p.description || '';
   overlayCredits.textContent     = p.credits || '';
-
   overlay.classList.add('open');
   overlay.setAttribute('aria-hidden', 'false');
   document.body.style.overflow = 'hidden';
