@@ -51,13 +51,13 @@ const projects = [
     description: "Art dircection for Mezzanine studio x Atmos event",
     credits: "Set Design: Alice Ferrante\nSet Decorator: Aurora Ulian",
     images: [
-      "images/ATMOS1.JGP",
-      "images/ATMOS2.JGP",
-      "images/ATMOS3.JGP",
-      "images/ATMOS4.JGP",
-      "images/ATMOS5.JGP",
-      "images/ATMOS6.JGP",
-      "images/ATMOS7.JGP",
+      "images/ATMOS1.JPG",
+"images/ATMOS2.JPG",
+"images/ATMOS3.JPG",
+"images/ATMOS4.JPG",
+"images/ATMOS5.JPG",
+"images/ATMOS6.JPG",
+"images/ATMOS7.JPG",
     ]
   },
       {
@@ -65,12 +65,12 @@ const projects = [
     description: "Art dircection for PMO Paris Fashion week 2026 Showrooom ",
     credits: "Set Design: Alice Ferrante\nSet Decorator: Aurora Ulian",
     images: [
-      "images/PMOsummer1.JPG",
-      "images/PMOsummer2.JPG",
-      "images/PMOsummer3.JGP",
-      "images/PMOsummer4.JGP",
-      "images/PMOsummer5.JGP",
-      "images/PMOsummer6.JGP",
+     "images/PMOsummer1.JPG",
+     "images/PMOsummer2.JPG",
+     "images/PMOsummer3.JPG",
+     "images/PMOsummer4.JPG",
+     "images/PMOsummer5.JPG",
+     "images/PMOsummer6.JPG",
     ]
   },
    
