@@ -231,7 +231,6 @@ images: [
   "images/FY2.jpg",
   "images/FY3.jpg",
   "images/FY4.jpg",
-  "images/FY5.jpg",
    
     ]
   },
