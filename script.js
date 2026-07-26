@@ -227,10 +227,10 @@ const projects = [
     description: "Fucking young Magazine cover 2026",
     credits: "Set Design: Alice Ferrante\nPhotography: Michiel Meewis",
 images: [
-  "images/FY1.JPG",
-  "images/FY2.JGP",
-  "images/FY3.JGP",
-  "images/FY4.JGP",
+ "images/FY1.JPG",
+"images/FY2.JPG",
+"images/FY3.JPG",
+"images/FY4.JPG",
    
     ]
   },
