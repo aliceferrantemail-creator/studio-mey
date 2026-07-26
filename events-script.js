@@ -61,7 +61,7 @@ const projects = [
   {
     title: "Purple Mountain Observatory Paris SFW2026",
     description: "Art direction for PMO Paris Fashion Week 2026 Showroom",
-    credits: "Set Design: Alice Ferrante\nSet Decorator: Aurora Ulian",
+    credits: "Set Design: Alice Ferrante\n",
     images: [
       "images/PMOsummer1.JPG",
       "images/PMOsummer2.JPG",
