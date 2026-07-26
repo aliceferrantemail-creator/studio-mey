@@ -222,6 +222,20 @@ const projects = [
       "images/jvck5.jpg",
     ]
   },
+     {
+    title: "Fucking Young Magazine cover",
+    description: "Fucking young Magazine cover 2026",
+    credits: "Set Design: Alice Ferrante\nPhotography: Michiel Meewis",
+images: [
+  "images/FY1.jpg",
+  "images/FY2.jpg",
+  "images/FY3.jpg",
+  "images/FY4.jpg",
+  "images/FY5.jpg",
+   
+    ]
+  },
+
 ];
 
 // ============================================================
