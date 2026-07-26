@@ -3,24 +3,13 @@
    Handles: project overlay, gallery interactions, year
    ============================================================ */
 
-// ============================================================
-//  PROJECT DATA
-//  This is where you fill in all your project information.
-//  Each { } block = one project card on the gallery.
-//  The order here matches the order of cards in index.html.
-//
-//  images: list the filenames of ALL photos for this project.
-//          They will appear stacked in the overlay.
-//          Put the images in your /images/ folder.
-// ============================================================
-
 const projects = [
   {
     title: "Columbia x Brandnation",
     description: "Columbia debut for Paris Fashion week 2026",
     credits: "Set Design: Alice Ferrante\nPhotography: Ian Robert Wilkinson",
     images: [
-     "images/ColumbiaxBrandnation1.jpg",
+      "images/ColumbiaxBrandnation1.jpg",
       "images/ColumbiaxBrandnation2.jpg",
       "images/ColumbiaxBrandnation3.jpg",
       "images/ColumbiaxBrandnation4.jpg",
@@ -57,11 +46,11 @@ const projects = [
       "images/GlassMag6.jpg",
       "images/GlassMag7.jpg",
       "images/GlassMag8.jpg",
-          ]
+    ]
   },
   {
     title: "Hiking Patrol - Renewal in Repose",
-   description: "\"Renewal In Repose\" embodies the discreet yet vital processes of shedding the old and nurturing the new, a quiet assurance of growth even in dormant months. This philosophy informs Hiking Patrol\'s design ethos: technical garments that are simple yet carefully made, designed to last, and conceived to transcend fleeting trends while adapting to shifting conditions.",
+    description: "\"Renewal In Repose\" embodies the discreet yet vital processes of shedding the old and nurturing the new, a quiet assurance of growth even in dormant months. This philosophy informs Hiking Patrol\'s design ethos: technical garments that are simple yet carefully made, designed to last, and conceived to transcend fleeting trends while adapting to shifting conditions.",
     credits: "Set Design: Alice Ferrante\nPhotography: Rory Griffin",
     images: [
       "images/HikingPatrolCity1.jpg",
@@ -76,10 +65,10 @@ const projects = [
   },
   {
     title: "Hiking Patrol SS26",
-    description: "Description of the fifth project.",
+    description: "Hiking Patrol Spring/Summer 2026 Collection: A sense of Ease",
     credits: "Set Design: Alice Ferrante\nPhotography: Rory Griffin",
     images: [
-     "images/HikingPatrolMoss1.jpg",
+      "images/HikingPatrolMoss1.jpg",
       "images/HikingPatrolMoss2.jpg",
       "images/HikingPatrolMoss3.jpg",
       "images/HikingPatrolMoss4.jpg",
@@ -90,8 +79,7 @@ const projects = [
   },
   {
     title: "Purple Mountain Observatory",
-    description: `Set within a constructed environment influenced by the idea of prospective engineered landscapes in space.
-    Within the studio, natural forms are reconstructed using industrial materials; metallic structures stand in for trees, fabricated surfaces echo the environments we recognise.`,
+    description: `Set within a constructed environment influenced by the idea of prospective engineered landscapes in space. Within the studio, natural forms are reconstructed using industrial materials; metallic structures stand in for trees, fabricated surfaces echo the environments we recognise.`,
     credits: "Set Design: Alice Ferrante\nPhotography: Rory Griffin",
     images: [
       "images/pmo1.jpg",
@@ -101,7 +89,7 @@ const projects = [
   },
   {
     title: "Cover for POP Magazine Issue 50",
-    description: "Amelia Gray for POP Magazine issue 50, photograohed by Oliver Hadlee Pearch",
+    description: "Amelia Gray for POP Magazine issue 50, photographed by Oliver Hadlee Pearch",
     credits: "Set Design: Alice Ferrante\nPhotography: Oliver Hadlee Pearch",
     images: [
       "images/pop1.jpg",
@@ -113,7 +101,7 @@ const projects = [
     ]
   },
   {
-    title: "Sky people",
+    title: "Sky People",
     description: "New collection debut for Sky People",
     credits: "Set Design: Alice Ferrante\nPhotography: Graeme Gaughan",
     images: [
@@ -123,7 +111,7 @@ const projects = [
       "images/skypeople4.jpg",
     ]
   },
-   {
+  {
     title: "The Rakish Gent Magazine",
     description: "The Rakish Gent Magazine Issue 6 with Francisco Lachowski",
     credits: "Set Design: Alice Ferrante\nPhotography: Edward Cooke",
@@ -132,7 +120,7 @@ const projects = [
       "images/therakishgent2.jpg",
     ]
   },
-   {
+  {
     title: "WSJ Magazine Cover - Edie Campbell",
     description: "WSJ Cover Edition",
     credits: "Set Design: Alice Ferrante\nPhotography: Laura Jane Coulson",
@@ -157,7 +145,7 @@ const projects = [
   },
   {
     title: "H.Moser & Cie - Streamline DNA Edition",
-    description: " Moser Watches 34mm and 28mm of Streamliner DNA.",
+    description: "Moser Watches 34mm and 28mm of Streamliner DNA.",
     credits: "Set Design: Alice Ferrante\nPhotography: Studio Siebrecht",
     images: [
       "images/Hmoserb1.jpg",
@@ -168,8 +156,8 @@ const projects = [
     ]
   },
   {
-    title: "Sports Direct - Nike Air Max - Heat Rises ",
-    description: "Heat Rises. Nikesportswear x Sportsdirectuk back on the streets with a new lineup of trainers.",
+    title: "Sports Direct - Nike Air Max - Heat Rises",
+    description: "Heat Rises. Nike Sportswear x Sports Direct back on the streets with a new lineup of trainers.",
     credits: "Set Design: Alice Ferrante\nPhotography: Daniel Alpernia",
     images: [
       "images/Sportsdirect1.jpg",
@@ -178,7 +166,7 @@ const projects = [
     ]
   },
   {
-    title: "Decathlon x Orienteer Mapazine ",
+    title: "Decathlon x Orienteer Magazine",
     description: "Escape Production x Decathlon.",
     credits: "Set Design: Alice Ferrante\nPhotography: Rory Griffin",
     images: [
@@ -194,7 +182,7 @@ const projects = [
   },
   {
     title: "Russh Magazine",
-    description: "Raffey in Loewe for @russhmagazine",
+    description: "Raffey in Loewe for Russh Magazine",
     credits: "Set Design: Alice Ferrante\nPhotography: Anna Victoria",
     images: [
       "images/russh1.jpg",
@@ -202,18 +190,18 @@ const projects = [
     ]
   },
   {
-    title: "Tom Grennan Music Video",
+    title: "Tom Grennan - Shadowboxing",
     description: "Shadowboxing by Tom Grennan",
-    credits: "Set Design: Alice Ferrante\nPhotography: Charlie-Charlie",
+    credits: "Set Design: Alice Ferrante\nDirector: Charlie & Charlie",
     images: [
       "images/tom1.jpg",
       "images/tom2.jpg",
     ]
   },
-    {
-    title: "Jvck James - Easier Done than Said Music video ",
-    description: "Jvcl James feat Stormzy - Easier Done than Said",
-    credits: "Set Design: Alice Ferrante\nPhotography: Chris Chance",
+  {
+    title: "Jvck James feat. Stormzy - Easier Done than Said",
+    description: "Jvck James feat Stormzy - Easier Done than Said",
+    credits: "Art Direction: Alice Ferrante\nPhotography: Chris Chance",
     images: [
       "images/jvck1.jpg",
       "images/jvck2.jpg",
@@ -222,19 +210,17 @@ const projects = [
       "images/jvck5.jpg",
     ]
   },
-     {
-    title: "Fucking Young Magazine cover",
-    description: "Fucking young Magazine cover 2026",
+  {
+    title: "Fucking Young Magazine Cover",
+    description: "Fucking Young Magazine cover 2026",
     credits: "Set Design: Alice Ferrante\nPhotography: Michiel Meewis",
-images: [
- "images/FY1.JPG",
-"images/FY2.JPG",
-"images/FY3.JPG",
-"images/FY4.JPG",
-   
+    images: [
+      "images/FY1.JPG",
+      "images/FY2.JPG",
+      "images/FY3.JPG",
+      "images/FY4.JPG",
     ]
   },
-
 ];
 
 // ============================================================
@@ -251,8 +237,6 @@ const overlayCredits     = document.getElementById('overlayCredits');
 
 function openProject(index) {
   const p = projects[index];
-
-  // Populate images
   overlayImages.innerHTML = '';
   p.images.forEach(src => {
     const img = document.createElement('img');
@@ -261,14 +245,10 @@ function openProject(index) {
     img.loading = 'lazy';
     overlayImages.appendChild(img);
   });
-
-  // Populate info
   overlayNumber.textContent      = String(index + 1).padStart(2, '0');
   overlayTitle.textContent       = p.title;
   overlayDescription.textContent = p.description || '';
   overlayCredits.textContent     = p.credits || '';
-
-  // Open
   overlay.classList.add('open');
   overlay.setAttribute('aria-hidden', 'false');
   document.body.style.overflow = 'hidden';
@@ -282,13 +262,11 @@ function closeOverlay() {
   document.body.style.overflow = '';
 }
 
-// Attach click to each card
 document.querySelectorAll('.project-card').forEach(card => {
   card.addEventListener('click', () => {
     const index = parseInt(card.dataset.project, 10);
     openProject(index);
   });
-  // Keyboard accessible
   card.setAttribute('tabindex', '0');
   card.setAttribute('role', 'button');
   card.addEventListener('keydown', e => {
@@ -300,7 +278,6 @@ document.querySelectorAll('.project-card').forEach(card => {
   });
 });
 
-// Close overlay
 overlayClose.addEventListener('click', closeOverlay);
 overlay.addEventListener('click', e => {
   if (e.target === overlay) closeOverlay();
@@ -309,6 +286,5 @@ document.addEventListener('keydown', e => {
   if (e.key === 'Escape') closeOverlay();
 });
 
-// Footer year
 const yearEl = document.getElementById('year');
 if (yearEl) yearEl.textContent = new Date().getFullYear();
