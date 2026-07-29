@@ -296,6 +296,7 @@ ul { list-style: none; }
   color: var(--ink-soft);
   margin-bottom: 28px;
   letter-spacing: 0.02em;
+  white-space: pre-line;
 }
 .overlay-credits {
   font-size: 0.62rem;

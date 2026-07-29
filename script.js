@@ -221,6 +221,33 @@ const projects = [
       "images/FY4.JPG",
     ]
   },
+  {
+    title: "Adidas x Footpatrol Megaride AG",
+    description: "Set design for Adidas x Footpatrol",
+    credits: "Set Design: Alice Ferrante\nSet Assistant: Aurora Ulian\nPhotography: Fergus Riley",
+    images: [
+      "images/FPxAdidas1.jpg",
+      "images/FPxAdidas2.jpg",
+      "images/FPxAdidas3.jpg",
+      "images/FPxAdidas4.jpg",
+      "images/FPxAdidas5.jpg",
+      "images/FPxAdidas6.jpg",
+      "images/FPxAdidas7.jpg",
+    ]
+  },
+  {
+    title: "F1 Academy x Tatler Magazine",
+    description: `For a century the British Grand Prix has been a boy's club. But now the Speed Queens have arrived.
+
+Courtesy of @f1academy – the all-female racing series making its @silverstonecircuit debut this summer – bold young women are emerging as stars in a sport that's been supercharged by Drive to Survive.`,
+    credits: "Set Design: Alice Ferrante\nPhotography: Oli Kearon",
+    images: [
+      "images/F1Tatler1.jpg",
+      "images/F1Tatler2.jpg",
+      "images/F1Tatler3.jpg",
+      "images/F1Tatler4.jpg",
+    ]
+  },
 ];
 
 // ============================================================
