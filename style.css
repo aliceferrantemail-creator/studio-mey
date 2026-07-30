@@ -164,6 +164,24 @@ ul { list-style: none; }
   max-width: 600px;
 }
 
+/* --- MASONRY / PINTEREST GALLERY (Graphics) --- */
+.gallery--masonry {
+  max-width: 1100px;
+  columns: 3;
+  column-gap: 14px;
+}
+.gallery--masonry .project-card { margin-bottom: 14px; }
+
+.gallery-empty {
+  font-size: 0.68rem;
+  font-weight: 300;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--ink-faint);
+  text-align: center;
+  padding: 80px 0;
+}
+
 /* Project cards */
 .project-card {
   break-inside: avoid;
@@ -461,6 +479,11 @@ ul { list-style: none; }
     columns: 1;
     max-width: 100%;
     margin: 0 auto;
+  }
+  .gallery--masonry {
+    columns: 2;
+    max-width: 100%;
+    column-gap: 8px;
   }
   .project-card { margin-bottom: 8px; }
 

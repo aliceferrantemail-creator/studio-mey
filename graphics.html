@@ -3,46 +3,11 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Contact — STUDIO MEY</title>
+  <title>Graphics — STUDIO MEY</title>
   <link rel="stylesheet" href="style.css" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@200;300;400&display=swap" rel="stylesheet" />
-  <style>
-    .contact-page {
-      position: relative;
-      z-index: 1;
-      min-height: calc(100vh - var(--nav-height));
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      padding: var(--nav-height) 40px 80px;
-    }
-    .contact-content {
-      text-align: center;
-      display: flex;
-      flex-direction: column;
-      gap: 20px;
-    }
-    .contact-name {
-      font-size: 0.68rem;
-      font-weight: 300;
-      letter-spacing: 0.28em;
-      text-transform: uppercase;
-      color: var(--ink-faint);
-      margin-bottom: 12px;
-    }
-    .contact-link {
-      font-size: 1rem;
-      font-weight: 300;
-      letter-spacing: 0.06em;
-      color: var(--ink-soft);
-      text-decoration: none;
-      transition: color 0.3s ease;
-      display: block;
-    }
-    .contact-link:hover { color: var(--ink); }
-  </style>
 </head>
 <body>
 
@@ -51,15 +16,15 @@
   </div>
 
   <header class="nav">
-    <a href="index.html" class="nav-logo">STUDIO MEY</a>
-    <nav class="nav-links">
+    <a href="index.html" class="nav-logo">STUDIO MEY<span class="nav-tagline">Art Direction & Set Design</span></a>
+        <nav class="nav-links">
       <a href="index.html" class="nav-link">Images</a>
       <a href="moving-images.html" class="nav-link">Moving Images</a>
-      <a href="graphics.html" class="nav-link">Graphics</a>
+      <a href="graphics.html" class="nav-link active">Graphics</a>
       <a href="events.html" class="nav-link">Events</a>
       <a href="archive.html" class="nav-link">Archive</a>
       <a href="info.html" class="nav-link">Info</a>
-      <a href="contact.html" class="nav-link active">Contact</a>
+      <a href="contact.html" class="nav-link">Contact</a>
     </nav>
   <button class="nav-hamburger" id="hamburger" aria-label="Menu">
     <span></span><span></span><span></span>
@@ -69,20 +34,30 @@
   <nav class="nav-mobile" id="mobileMenu">
     <a href="index.html" class="nav-mobile-link ">Images</a>
     <a href="moving-images.html" class="nav-mobile-link ">Moving Images</a>
-    <a href="graphics.html" class="nav-mobile-link ">Graphics</a>
+    <a href="graphics.html" class="nav-mobile-link active">Graphics</a>
     <a href="events.html" class="nav-mobile-link ">Events</a>
     <a href="archive.html" class="nav-mobile-link ">Archive</a>
     <a href="info.html" class="nav-mobile-link ">Info</a>
-    <a href="contact.html" class="nav-mobile-link active">Contact</a>
+    <a href="contact.html" class="nav-mobile-link ">Contact</a>
   </nav>
 
-  <main class="contact-page">
-    <div class="contact-content">
-      <p class="contact-name">Alice Ferrante — Set Designer</p>
-      <a href="mailto:aliceferrantemail@gmail.com" class="contact-link">aliceferrantemail@gmail.com</a>
-      <a href="tel:+447407689007" class="contact-link">+44 7407 689007</a>
-      <a href="https://www.instagram.com/_mey.line_/" target="_blank" rel="noopener" class="contact-link">@_mey.line_</a>
-    </div>
+  <main class="gallery gallery--masonry" id="gallery">
+
+    <!--
+      Add graphics pieces here, same pattern as the Images page.
+      Each card needs a matching entry (title/description/credits/images)
+      in graphics-script.js at the same index.
+
+      <article class="project-card" data-project="0">
+        <div class="card-img-wrap">
+          <img src="images/your-image.jpg" alt="Project name" loading="lazy" />
+          <div class="card-hover-label">View Project</div>
+        </div>
+      </article>
+    -->
+
+    <p class="gallery-empty">Graphics coming soon</p>
+
   </main>
 
   <footer class="site-footer">
@@ -92,7 +67,22 @@
     </span>
   </footer>
 
-  <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+  <div class="overlay" id="overlay" aria-hidden="true">
+    <button class="overlay-close" id="overlayClose" aria-label="Close project">
+      <span></span><span></span>
+    </button>
+    <div class="overlay-inner">
+      <div class="overlay-images" id="overlayImages"></div>
+      <div class="overlay-info">
+        <p class="overlay-number" id="overlayNumber">01</p>
+        <h2 class="overlay-title" id="overlayTitle">Project Title</h2>
+        <p class="overlay-description" id="overlayDescription"></p>
+        <p class="overlay-credits" id="overlayCredits"></p>
+      </div>
+    </div>
+  </div>
+
+  <script src="graphics-script.js"></script>
   <script>
     const hamburger = document.getElementById('hamburger');
     const mobileMenu = document.getElementById('mobileMenu');

@@ -15,6 +15,92 @@
       margin-left: auto !important;
       margin-right: auto !important;
     }
+    .book-card { margin-bottom: 40px; }
+    .book-viewer {
+      position: relative;
+      display: flex;
+      align-items: center;
+      gap: 14px;
+    }
+    .book-stage {
+      position: relative;
+      flex: 1;
+      aspect-ratio: 1466 / 986;
+      background: #fafafa;
+      border: 1px solid #ebebeb;
+      overflow: hidden;
+    }
+    .book-stage img {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      opacity: 0;
+      transform: scale(1.02);
+      transition: opacity 0.5s ease, transform 0.5s ease;
+    }
+    .book-stage img.current {
+      opacity: 1;
+      transform: scale(1);
+    }
+    .book-stage-click {
+      position: absolute;
+      inset: 0;
+      display: flex;
+      cursor: pointer;
+    }
+    .book-stage-click span { flex: 1; }
+    .book-stage-click span:first-child { cursor: w-resize; }
+    .book-stage-click span:last-child { cursor: e-resize; }
+    .book-arrow {
+      flex-shrink: 0;
+      width: 32px;
+      height: 32px;
+      border: none;
+      background: none;
+      cursor: pointer;
+      color: var(--ink-faint);
+      font-size: 1.4rem;
+      font-weight: 300;
+      transition: color var(--transition);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .book-arrow:hover { color: var(--ink); }
+    .book-arrow:disabled { opacity: 0.25; cursor: default; }
+    .book-progress {
+      text-align: center;
+      font-size: 0.62rem;
+      font-weight: 300;
+      letter-spacing: 0.2em;
+      color: var(--ink-faint);
+      margin-top: 14px;
+    }
+    .book-info {
+      padding-top: 16px;
+      margin-top: 20px;
+    }
+    .book-title {
+      font-size: 0.82rem;
+      font-weight: 300;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--ink);
+      margin-bottom: 8px;
+    }
+    .book-description {
+      font-size: 0.72rem;
+      font-weight: 300;
+      letter-spacing: 0.02em;
+      line-height: 1.8;
+      color: var(--ink-soft);
+    }
+    @media (max-width: 600px) {
+      .book-viewer { gap: 6px; }
+      .book-arrow { width: 22px; font-size: 1.1rem; }
+    }
   </style>
 </head>
 <body>
@@ -28,6 +114,7 @@
         <nav class="nav-links">
       <a href="index.html" class="nav-link">Images</a>
       <a href="moving-images.html" class="nav-link">Moving Images</a>
+      <a href="graphics.html" class="nav-link">Graphics</a>
       <a href="events.html" class="nav-link">Events</a>
       <a href="archive.html" class="nav-link active">Archive</a>
       <a href="info.html" class="nav-link">Info</a>
@@ -41,6 +128,7 @@
   <nav class="nav-mobile" id="mobileMenu">
     <a href="index.html" class="nav-mobile-link ">Images</a>
     <a href="moving-images.html" class="nav-mobile-link ">Moving Images</a>
+    <a href="graphics.html" class="nav-mobile-link ">Graphics</a>
     <a href="events.html" class="nav-mobile-link ">Events</a>
     <a href="archive.html" class="nav-mobile-link active">Archive</a>
     <a href="info.html" class="nav-mobile-link ">Info</a>
@@ -48,6 +136,26 @@
   </nav>
 
   <main class="gallery gallery--single" id="gallery">
+
+    <div class="book-card">
+      <div class="book-viewer">
+        <button class="book-arrow" id="bookPrev" aria-label="Previous page">‹</button>
+        <div class="book-stage" id="bookStage">
+          <img class="current" id="bookImgA" src="images/book1-pages/page-01.jpg" alt="Page 1" />
+          <img id="bookImgB" src="images/book1-pages/page-01.jpg" alt="" />
+          <div class="book-stage-click">
+            <span id="bookClickPrev"></span>
+            <span id="bookClickNext"></span>
+          </div>
+        </div>
+        <button class="book-arrow" id="bookNext" aria-label="Next page">›</button>
+      </div>
+      <p class="book-progress"><span id="bookPageNum">1</span> / <span id="bookPageTotal">39</span></p>
+      <div class="book-info">
+        <p class="book-title">India - Nepal, July - August 2022 — Alice Ferrante</p>
+        <p class="book-description">A little photobook with pictures taken with my Leica M6, from Ladakh all the way to Nepal, 2022.</p>
+      </div>
+    </div>
 
     <article class="project-card" data-project="0">
       <div class="card-img-wrap">
@@ -95,6 +203,53 @@
   </div>
 
   <script src="archive-script.js"></script>
+  <script>
+    (function () {
+      const total = 39;
+      const pad = n => String(n).padStart(2, '0');
+      const pathFor = n => `images/book1-pages/page-${pad(n)}.jpg`;
+
+      const imgA = document.getElementById('bookImgA');
+      const imgB = document.getElementById('bookImgB');
+      const pageNumEl = document.getElementById('bookPageNum');
+      const prevBtn = document.getElementById('bookPrev');
+      const nextBtn = document.getElementById('bookNext');
+
+      let page = 1;
+      let currentEl = imgA;
+      let hiddenEl = imgB;
+
+      function updateButtons() {
+        prevBtn.disabled = page <= 1;
+        nextBtn.disabled = page >= total;
+      }
+
+      function goTo(n) {
+        n = Math.max(1, Math.min(total, n));
+        if (n === page) return;
+        hiddenEl.src = pathFor(n);
+        hiddenEl.alt = `Page ${n}`;
+        currentEl.classList.remove('current');
+        hiddenEl.classList.add('current');
+        [currentEl, hiddenEl] = [hiddenEl, currentEl];
+        page = n;
+        pageNumEl.textContent = page;
+        updateButtons();
+      }
+
+      document.getElementById('bookClickPrev').addEventListener('click', () => goTo(page - 1));
+      document.getElementById('bookClickNext').addEventListener('click', () => goTo(page + 1));
+      prevBtn.addEventListener('click', () => goTo(page - 1));
+      nextBtn.addEventListener('click', () => goTo(page + 1));
+
+      document.addEventListener('keydown', e => {
+        if (e.key === 'ArrowLeft') goTo(page - 1);
+        if (e.key === 'ArrowRight') goTo(page + 1);
+      });
+
+      updateButtons();
+    })();
+  </script>
   <script>
     const hamburger = document.getElementById('hamburger');
     const mobileMenu = document.getElementById('mobileMenu');
