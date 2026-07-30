@@ -71,14 +71,6 @@ const projects = [
     ]
   },
   {
-    title: "Jazzy Sport Radio Poster",
-    description: "",
-    credits: "Graphic Design: Alice Ferrante",
-    images: [
-      "images/js1.jpg",
-    ]
-  },
-  {
     title: "Mello Blocco Climbing festival poster",
     description: "",
     credits: "Graphic Design: Alice Ferrante",
@@ -150,6 +142,76 @@ const projects = [
     images: [
       "images/usecollectibleposter.jpg",
     ]
+  },
+  {
+    title: "Set Deck Intro design",
+    description: "",
+    credits: "Graphic Design: Alice Ferrante",
+    images: [
+      "images/deck1.jpg",
+    ]
+  },
+  {
+    title: "Graphic Experiment",
+    description: "",
+    credits: "Graphic Design: Alice Ferrante",
+    images: [
+      "images/graphic1.jpg",
+    ]
+  },
+  {
+    title: "Final Zine Dissertation, \"Live or Leave\"",
+    description: "",
+    credits: "Graphic Design: Alice Ferrante",
+    images: ["images/zine1.jpg"]
+  },
+  {
+    title: "Final Zine Dissertation, \"Live or Leave\"",
+    description: "",
+    credits: "Graphic Design: Alice Ferrante",
+    images: ["images/z1.jpg"]
+  },
+  {
+    title: "Final Zine Dissertation, \"Live or Leave\"",
+    description: "",
+    credits: "Graphic Design: Alice Ferrante",
+    images: ["images/zi1.jpg"]
+  },
+  {
+    title: "Final Zine Dissertation, \"Live or Leave\"",
+    description: "",
+    credits: "Graphic Design: Alice Ferrante",
+    images: ["images/zin1.jpg"]
+  },
+  {
+    title: "Final Zine Dissertation, \"Live or Leave\"",
+    description: "",
+    credits: "Graphic Design: Alice Ferrante",
+    images: ["images/zinee.jpg"]
+  },
+  {
+    title: "Final Zine Dissertation, \"Live or Leave\"",
+    description: "",
+    credits: "Graphic Design: Alice Ferrante",
+    images: ["images/zzine1.jpg"]
+  },
+  {
+    title: "Final Zine Dissertation, \"Live or Leave\"",
+    description: "",
+    credits: "Graphic Design: Alice Ferrante",
+    images: ["images/zz1.jpg"]
+  },
+  {
+    title: "Final Zine Dissertation, \"Live or Leave\"",
+    description: "",
+    credits: "Graphic Design: Alice Ferrante",
+    images: ["images/zineee.jpg"]
+  },
+  {
+    title: "Final Zine Dissertation, \"Live or Leave\"",
+    description: "",
+    credits: "Graphic Design: Alice Ferrante",
+    images: ["images/lastzine.jpg"]
   },
 ];
 

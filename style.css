@@ -172,16 +172,6 @@ ul { list-style: none; }
 }
 .gallery--masonry .project-card { margin-bottom: 14px; }
 
-.gallery-empty {
-  font-size: 0.68rem;
-  font-weight: 300;
-  letter-spacing: 0.15em;
-  text-transform: uppercase;
-  color: var(--ink-faint);
-  text-align: center;
-  padding: 80px 0;
-}
-
 /* Project cards */
 .project-card {
   break-inside: avoid;
