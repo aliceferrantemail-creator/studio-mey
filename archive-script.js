@@ -82,6 +82,7 @@ function closeOverlay() {
 }
 
 document.querySelectorAll('.project-card').forEach(card => {
+  if (card.dataset.project === undefined) return;
   card.addEventListener('click', () => {
     const index = parseInt(card.dataset.project, 10);
     openProject(index);

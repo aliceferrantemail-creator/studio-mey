@@ -15,7 +15,6 @@
       margin-left: auto !important;
       margin-right: auto !important;
     }
-    .book-card { margin-bottom: 40px; }
     .book-viewer {
       position: relative;
       display: flex;
@@ -30,17 +29,18 @@
       border: 1px solid #ebebeb;
       overflow: hidden;
     }
-    .book-stage img {
+    .overlay-images .book-stage img {
       position: absolute;
       inset: 0;
       width: 100%;
       height: 100%;
+      max-height: none;
       object-fit: cover;
       opacity: 0;
       transform: scale(1.02);
       transition: opacity 0.5s ease, transform 0.5s ease;
     }
-    .book-stage img.current {
+    .overlay-images .book-stage img.current {
       opacity: 1;
       transform: scale(1);
     }
@@ -77,25 +77,6 @@
       letter-spacing: 0.2em;
       color: var(--ink-faint);
       margin-top: 14px;
-    }
-    .book-info {
-      padding-top: 16px;
-      margin-top: 20px;
-    }
-    .book-title {
-      font-size: 0.82rem;
-      font-weight: 300;
-      letter-spacing: 0.1em;
-      text-transform: uppercase;
-      color: var(--ink);
-      margin-bottom: 8px;
-    }
-    .book-description {
-      font-size: 0.72rem;
-      font-weight: 300;
-      letter-spacing: 0.02em;
-      line-height: 1.8;
-      color: var(--ink-soft);
     }
     @media (max-width: 600px) {
       .book-viewer { gap: 6px; }
@@ -137,25 +118,12 @@
 
   <main class="gallery gallery--single" id="gallery">
 
-    <div class="book-card">
-      <div class="book-viewer">
-        <button class="book-arrow" id="bookPrev" aria-label="Previous page">‹</button>
-        <div class="book-stage" id="bookStage">
-          <img class="current" id="bookImgA" src="images/book1-pages/page-01.jpg" alt="Page 1" />
-          <img id="bookImgB" src="images/book1-pages/page-01.jpg" alt="" />
-          <div class="book-stage-click">
-            <span id="bookClickPrev"></span>
-            <span id="bookClickNext"></span>
-          </div>
-        </div>
-        <button class="book-arrow" id="bookNext" aria-label="Next page">›</button>
+    <article class="project-card" id="bookThumbCard">
+      <div class="card-img-wrap">
+        <img src="images/book1-pages/page-01.jpg" alt="India - Nepal, July - August 2022" loading="lazy" />
+        <div class="card-hover-label">View Project</div>
       </div>
-      <p class="book-progress"><span id="bookPageNum">1</span> / <span id="bookPageTotal">39</span></p>
-      <div class="book-info">
-        <p class="book-title">India - Nepal, July - August 2022 — Alice Ferrante</p>
-        <p class="book-description">A little photobook with pictures taken with my Leica M6, from Ladakh all the way to Nepal, 2022.</p>
-      </div>
-    </div>
+    </article>
 
     <article class="project-card" data-project="0">
       <div class="card-img-wrap">
@@ -208,46 +176,94 @@
       const total = 39;
       const pad = n => String(n).padStart(2, '0');
       const pathFor = n => `images/book1-pages/page-${pad(n)}.jpg`;
+      let bookState = null;
 
-      const imgA = document.getElementById('bookImgA');
-      const imgB = document.getElementById('bookImgB');
-      const pageNumEl = document.getElementById('bookPageNum');
-      const prevBtn = document.getElementById('bookPrev');
-      const nextBtn = document.getElementById('bookNext');
-
-      let page = 1;
-      let currentEl = imgA;
-      let hiddenEl = imgB;
-
-      function updateButtons() {
-        prevBtn.disabled = page <= 1;
-        nextBtn.disabled = page >= total;
+      function bookViewerHTML() {
+        return `
+          <div class="book-viewer">
+            <button class="book-arrow" id="bookPrev" aria-label="Previous page">‹</button>
+            <div class="book-stage" id="bookStage">
+              <img class="current" id="bookImgA" src="${pathFor(1)}" alt="Page 1" />
+              <img id="bookImgB" src="${pathFor(1)}" alt="" />
+              <div class="book-stage-click">
+                <span id="bookClickPrev"></span>
+                <span id="bookClickNext"></span>
+              </div>
+            </div>
+            <button class="book-arrow" id="bookNext" aria-label="Next page">›</button>
+          </div>
+          <p class="book-progress"><span id="bookPageNum">1</span> / <span id="bookPageTotal">${total}</span></p>
+        `;
       }
 
-      function goTo(n) {
-        n = Math.max(1, Math.min(total, n));
-        if (n === page) return;
-        hiddenEl.src = pathFor(n);
-        hiddenEl.alt = `Page ${n}`;
-        currentEl.classList.remove('current');
-        hiddenEl.classList.add('current');
-        [currentEl, hiddenEl] = [hiddenEl, currentEl];
-        page = n;
-        pageNumEl.textContent = page;
+      function initBookViewer() {
+        const imgA = document.getElementById('bookImgA');
+        const imgB = document.getElementById('bookImgB');
+        const pageNumEl = document.getElementById('bookPageNum');
+        const prevBtn = document.getElementById('bookPrev');
+        const nextBtn = document.getElementById('bookNext');
+
+        const state = { page: 1 };
+        let currentEl = imgA;
+        let hiddenEl = imgB;
+
+        function updateButtons() {
+          prevBtn.disabled = state.page <= 1;
+          nextBtn.disabled = state.page >= total;
+        }
+
+        function goTo(n) {
+          n = Math.max(1, Math.min(total, n));
+          if (n === state.page) return;
+          hiddenEl.src = pathFor(n);
+          hiddenEl.alt = `Page ${n}`;
+          currentEl.classList.remove('current');
+          hiddenEl.classList.add('current');
+          [currentEl, hiddenEl] = [hiddenEl, currentEl];
+          state.page = n;
+          pageNumEl.textContent = state.page;
+          updateButtons();
+        }
+
+        document.getElementById('bookClickPrev').addEventListener('click', () => goTo(state.page - 1));
+        document.getElementById('bookClickNext').addEventListener('click', () => goTo(state.page + 1));
+        prevBtn.addEventListener('click', () => goTo(state.page - 1));
+        nextBtn.addEventListener('click', () => goTo(state.page + 1));
         updateButtons();
+
+        bookState = { get page() { return state.page; }, goTo };
       }
 
-      document.getElementById('bookClickPrev').addEventListener('click', () => goTo(page - 1));
-      document.getElementById('bookClickNext').addEventListener('click', () => goTo(page + 1));
-      prevBtn.addEventListener('click', () => goTo(page - 1));
-      nextBtn.addEventListener('click', () => goTo(page + 1));
+      function openBook() {
+        overlayImages.innerHTML = bookViewerHTML();
+        overlayNumber.textContent = '';
+        overlayTitle.textContent = 'India - Nepal, July - August 2022 — Alice Ferrante';
+        overlayDescription.textContent = 'A little photobook with pictures taken with my Leica M6, from Ladakh all the way to Nepal, 2022.';
+        overlayCredits.textContent = '';
+        overlay.classList.add('open');
+        overlay.setAttribute('aria-hidden', 'false');
+        document.body.style.overflow = 'hidden';
+        overlayImages.scrollTop = 0;
+        overlay.scrollTop = 0;
+        initBookViewer();
+      }
 
-      document.addEventListener('keydown', e => {
-        if (e.key === 'ArrowLeft') goTo(page - 1);
-        if (e.key === 'ArrowRight') goTo(page + 1);
+      const bookThumb = document.getElementById('bookThumbCard');
+      bookThumb.addEventListener('click', openBook);
+      bookThumb.setAttribute('tabindex', '0');
+      bookThumb.setAttribute('role', 'button');
+      bookThumb.addEventListener('keydown', e => {
+        if (e.key === 'Enter' || e.key === ' ') {
+          e.preventDefault();
+          openBook();
+        }
       });
 
-      updateButtons();
+      document.addEventListener('keydown', e => {
+        if (!bookState || !overlay.classList.contains('open') || !document.getElementById('bookStage')) return;
+        if (e.key === 'ArrowLeft') bookState.goTo(bookState.page - 1);
+        if (e.key === 'ArrowRight') bookState.goTo(bookState.page + 1);
+      });
     })();
   </script>
   <script>
