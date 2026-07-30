@@ -3,16 +3,154 @@
    ============================================================ */
 
 const projects = [
-  // Add entries here, matching the card order in graphics.html, e.g.:
-  // {
-  //   title: "Project Title",
-  //   description: "Short description",
-  //   credits: "Design: Alice Ferrante",
-  //   images: [
-  //     "images/example1.jpg",
-  //     "images/example2.jpg",
-  //   ]
-  // },
+  {
+    title: "Free Mon Cheri — Album Cover Graphics",
+    description: "",
+    credits: "Graphic Design: Alice Ferrante",
+    images: [
+      "images/free1.JPG",
+      "images/free2.jpg",
+      "images/free3.jpg",
+      "images/free4.jpg",
+    ]
+  },
+  {
+    title: "Semi Devine Newsletter Head Logo",
+    description: "",
+    credits: "Graphic Design: Alice Ferrante",
+    images: [
+      "images/semidevine1.jpg",
+    ]
+  },
+  {
+    title: "Menu Design Experiment for Dalston restaurant",
+    description: "",
+    credits: "Graphic Design: Alice Ferrante",
+    images: [
+      "images/menu1.jpg",
+    ]
+  },
+  {
+    title: "Furnistool Bali Furniture shop logo",
+    description: "",
+    credits: "Graphic Design: Alice Ferrante",
+    images: [
+      "images/furni1.jpg",
+    ]
+  },
+  {
+    title: "The Soul Maker Business Card design",
+    description: "",
+    credits: "Graphic Design: Alice Ferrante",
+    images: [
+      "images/sm1.jpg",
+    ]
+  },
+  {
+    title: "Poster",
+    description: "",
+    credits: "Graphic Design: Alice Ferrante",
+    images: [
+      "images/p1.jpg",
+    ]
+  },
+  {
+    title: "Logo ideas for Nira Surf Villas",
+    description: "",
+    credits: "Graphic Design: Alice Ferrante",
+    images: [
+      "images/niraexp1.jpg",
+    ]
+  },
+  {
+    title: "Poster",
+    description: "",
+    credits: "Graphic Design: Alice Ferrante",
+    images: [
+      "images/po2.jpg",
+    ]
+  },
+  {
+    title: "Jazzy Sport Radio Poster",
+    description: "",
+    credits: "Graphic Design: Alice Ferrante",
+    images: [
+      "images/js1.jpg",
+    ]
+  },
+  {
+    title: "Mello Blocco Climbing festival poster",
+    description: "",
+    credits: "Graphic Design: Alice Ferrante",
+    images: [
+      "images/mb1.jpg",
+    ]
+  },
+  {
+    title: "Mello Blocco Climbing festival poster",
+    description: "",
+    credits: "Graphic Design: Alice Ferrante",
+    images: [
+      "images/melloblocco1.jpg",
+    ]
+  },
+  {
+    title: "Flying Lotus Inspired poster",
+    description: "",
+    credits: "Graphic Design: Alice Ferrante",
+    images: [
+      "images/fl1.jpg",
+    ]
+  },
+  {
+    title: "Logo for Kuno Antique",
+    description: "",
+    credits: "Graphic Design: Alice Ferrante",
+    images: [
+      "images/kunologo1.jpg",
+    ]
+  },
+  {
+    title: "Ideas for Nira Surf Villas",
+    description: "",
+    credits: "Graphic Design: Alice Ferrante",
+    images: [
+      "images/nirasurf1.jpg",
+    ]
+  },
+  {
+    title: "Nira Surf Villas Poster",
+    description: "",
+    credits: "Graphic Design: Alice Ferrante",
+    images: [
+      "images/scirraposter1.jpg",
+    ]
+  },
+  {
+    title: "Nira Business Card Design",
+    description: "",
+    credits: "Graphic Design: Alice Ferrante",
+    images: [
+      "images/niracard1.jpg",
+      "images/niracard2.jpg",
+    ]
+  },
+  {
+    title: "Use Collectible Vintage Clothing Logo Design",
+    description: "",
+    credits: "Graphic Design: Alice Ferrante",
+    images: [
+      "images/usecollectible1.jpg",
+    ]
+  },
+  {
+    title: "Use Collectible poster design",
+    description: "",
+    credits: "Graphic Design: Alice Ferrante",
+    images: [
+      "images/usecollectibleposter.jpg",
+    ]
+  },
 ];
 
 // ============================================================
